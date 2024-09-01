@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>纪念爷爷</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 0;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        .bio-section, .timeline-section {
+            margin-top: 50px;
+        }
+
+        .bio-section {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .bio-section h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .bio-section p {
+            line-height: 1.8;
+            font-size: 1rem;
+        }
+
+        .timeline-section {
+            padding: 20px;
+        }
+
+        .timeline {
+            position: relative;
+            padding: 20px 0;
+            list-style: none;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #4CAF50;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            position: relative;
+            width: 50%;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .timeline-item-left {
+            left: 0;
+        }
+
+        .timeline-item-right {
+            left: 50%;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            width: 20px;
+            height: 20px;
+            background-color: #4CAF50;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .timeline-item-left::before {
+            left: -10px;
+        }
+
+        .timeline-item-right::before {
+            left: calc(-10px + 100%);
+        }
+
+        .timeline-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .timeline-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .timeline-item p {
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .timeline-item {
+                width: 100%;
+                left: 0 !important;
+                margin-left: 0 !important;
+            }
+
+            .timeline-item::before {
+                left: -30px;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item img {
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>纪念爷爷</h1>
+    </header>
+
+    <div class="container">
+        <!-- 生平简介 -->
+        <section class="bio-section">
+            <h2>生平简介</h2>
+            <p>我的爷爷出生于1928年，生活在中国的一个小村庄里。他勤劳朴实，乐于助人，是一位深受社区尊敬的人。爷爷一生经历了许多风风雨雨，从艰苦的年代到改革开放的新时代，他始终保持着乐观的精神。爷爷教给我们许多人生的智慧，他的故事将在我们的家庭中代代相传。</p>
+        </section>
+
+        <!-- 时间线 -->
+        <section class="timeline-section">
+            <h2>时间线</h2>
+            <ul class="timeline">
+                <li class="timeline-item timeline-item-left">
+                    <img src="https://via.placeholder.com/300x200" alt="照片">
+                    <h3>1925年 - 出生</h3>
+                    <p>爷爷出生于1925年，在一个宁静的农村家庭中，他是家中的长子。</p>
+                </li>
+                <li class="timeline-item timeline-item-right">
+                    <img src="https://via.placeholder.com/300x200" alt="照片">
+                    <h3>1950年 - 结婚</h3>
+                    <p>1950年，爷爷和奶奶结婚，开始了他们幸福的婚姻生活，并共同抚养了五个孩子。</p>
+                </li>
+                <li class="timeline-item timeline-item-left">
+                    <img src="https://via.placeholder.com/300x200" alt="照片">
+                    <h3>1978年 - 退休</h3>
+                    <p>1978年，爷爷正式退休，回到了他的家乡，享受晚年生活，继续耕种他的土地。</p>
+                </li>
+                <li class="timeline-item timeline-item-right">
+                    <img src="https://via.placeholder.com/300x200" alt="照片">
+                    <h3>2005年 - 80岁生日</h3>
+                    <p>在2005年，爷爷迎来了他的80岁生日，家人朋友齐聚一堂为他庆祝。</p>
+                </li>
+            </ul>
+        </section>
+    </div>
+</body>
+</html>
